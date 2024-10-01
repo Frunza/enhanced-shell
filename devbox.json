@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
+  "packages": [
+    "python@3.12.4",
+    "go@1.22.5",
+    "starship@1.20.1",
+    "stow@2.4.0",
+    "zsh-syntax-highlighting@0.8.0",
+    "zsh-autosuggestions@0.7.0",
+    "zsh-history-substring-search@1.1.0",
+    "zoxide@0.9.4",
+    "eza@0.18.24",
+    "bat@0.24.0",
+    "fzf@0.54.3",
+    "yq@3.4.3"
+  ],
+  "shell": {
+    "init_hook": [
+      "source ./init.sh",
+      "sh sync.sh"
+    ]
+  }
+}
