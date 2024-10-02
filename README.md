@@ -23,7 +23,7 @@ Checkout the `git` repository *https://github.com/Frunza/enhanced-shell.git* in 
 cd ~
 git clone https://github.com/Frunza/enhanced-shell.git
 ```
-It is important to clone the repostory in your home directory because the `devbox` shell must be started from inside the repository and it is assumed that the repository location is there.
+It is important to clone the repository in your home directory because the `devbox` shell must be started from inside the repository and it is assumed that the repository location is there.
 
 Move your `.zshrc` and `.config/starship.toml` files to some backup location. If `.config/starship.toml` does not exist, ignore it. If you are not setting things up for a new machine, check any custom configuration of `.zshrc` and `.config/starship.toml` and add it to `enhanced-shell/dotfiles/.zshrc` and `enhanced-shell/dotfiles/.config/starship.toml`.
 
@@ -40,7 +40,7 @@ From now on, every time you start a new shell, you will get an enhanced shell wi
 
 Let's go step by step to see how everything was set up.
 
-The first meaningful command called was `devbox shell`. This started a `devbox` shell with the configuration of `devbox.json`. If you take a look at it, you will notice 2 main patrs: packages and init hooks.
+The first meaningful command called was `devbox shell`. This started a `devbox` shell with the configuration of `devbox.json`. If you take a look at it, you will notice 2 main parts: packages and init hooks.
 
 Your new shell will have all packages configured preinstalled with the versions you specified. It is a good idea to version everything so that you do not unexpectedly end up with tools that do not work as expected any more.
 
@@ -50,7 +50,7 @@ The second init hook uses the [stow](https://www.gnu.org/software/stow/) tool to
 
 ## What we got
 
-First of all, we new have a default shell with desired tools preconfgured. Since `.zshrc` and `.config/starship.toml` are only shortcuts now, every time you pull from the repository, you will get new changes automatically, and in this case easily sync your enhanced shell between more machines.
+First of all, we new have a default shell with desired tools preconfigured. Since `.zshrc` and `.config/starship.toml` are only shortcuts now, every time you pull from the repository, you will get new changes automatically, and in this case easily sync your enhanced shell between more machines.
 
 Even if a new tool is added in the `.config` file via the repository, the first shell will automatically make a shortcut for it, and therefore make it available right away by calling the `sync.sh` script from its init hooks.
 
@@ -59,12 +59,12 @@ Even if a new tool is added in the `.config` file via the repository, the first 
 ```sh
 eval "$(starship init zsh)" || handle_error
 ```
-this initizlizes [starship](https://starship.rs/), a handy tool with various features. Some relevant ones are moving the current path and adding some extra information above your command promt, leaving it only with the command promt character; this way the place where you type has a lot more space. It also adds some coloring for failed and succeeded commands. Feel free to use more of its features and change its configuration `.config/starship.toml`.
+this initializes [starship](https://starship.rs/), a handy tool with various features. Some relevant ones are moving the current path and adding some extra information above your command prompt, leaving it only with the command prompt character; this way the place where you type has a lot more space. It also adds some coloring for failed and succeeded commands. Feel free to use more of its features and change its configuration `.config/starship.toml`.
 
 ```sh
 eval "$(zoxide init --cmd cd zsh)" || handle_error
 ```
-this initizlizes [zoxide](https://github.com/ajeetdsouza/zoxide), a tool that enhances your `cd` command by smartly figuring out where you want to navigate in a more complex structure by indexing your most used paths.
+this initializes [zoxide](https://github.com/ajeetdsouza/zoxide), a tool that enhances your `cd` command by smartly figuring out where you want to navigate in a more complex structure by indexing your most used paths.
 Example usage in the repository:
 ```sh
 cd dotfiles/.config
@@ -97,7 +97,7 @@ docker ps
 ssh root@myVM
 ls
 ```
-if you type `ssh` and press the up arroy key, you will get `ssh root@123.123.123.123` as autocomletion; pressing the up arrow key again will give you `ssh root@myVM`.
+if you type `ssh` and press the up arrow key, you will get `ssh root@123.123.123.123` as autocompletion; pressing the up arrow key again will give you `ssh root@myVM`.
 
 ```sh
 alias clear="tput reset && printf '\033[3J'"
