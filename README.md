@@ -165,7 +165,7 @@ enables command-line completion for `kubernetes` commands in the shell. For exam
 cd ~
 clear
 ```
-navigates to the location of your enhanced shell repository and starts a `devbox` shell. This is the place where the path of the repository is important. Afterwards your shell navigates to your home directory, and clears the boilerplace at the end.
+navigates to the location of your enhanced shell repository and starts a `devbox` shell. This is the place where the path of the repository is important. Afterwards your shell navigates to your home directory, and clears the boilerplate at the end.
 
 ### Let's go through some of the devbox tools
 
